@@ -2,6 +2,8 @@
 
 This pageturner connects to a standard dual footswitch - via 6,3mm (1/4-inch) TRS connectors - and a PC using a micro-USB cable.
 
+![Pageturner with Boss FS-7](images/pageturner-fs7.jpg)
+
 I use a Boss FS-7 Footswitch, which requires no batteries nor external power supply when used with the pageturner.
 
 The pageturner also works with my Android phone using an USB adapter.
@@ -50,6 +52,13 @@ settings can be changed by triggering inputs while holding the mode button:
 
 The switch contact of the TRS socket is connected to ground via a resistor. When the jack is unplugged, the tip contact gets connected to the switch contact. In this configuration, a `digitalRead` on the pin connected to the tip contact returns LOW, but an `analogRead` on the same pin is able to detect the slightly higher voltage from the division of the internal pull-up resistor of 20-50 kΩ, and the external resistor of 10 kΩ.
 The constant `inputJackTipAnalogThreshold` defines the threshold voltage (10 Bit resolution for 5V) which must be exceeded to detect the unplugged state.
+
+
+## Housing
+
+I put all the components into a small case (dimensions: 80 x 46 x 26 mm) and included a small micro-USB extension cable so there is no stress on the Arduino's USB socket. Using a slightly bigger case is probably not a bad idea...
+
+![Pageturner with Boss FS-7](images/pageturner-inside.jpg)
 
 ## Usage
 
